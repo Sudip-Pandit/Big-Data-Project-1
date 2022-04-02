@@ -1,0 +1,26 @@
+Project Req
+
+Phase 1 ---- Project (minor Execution)
+
+1) Create a very new project in Eclipse and do the configuration (Conf,sc)
+2) Read the sample avro data 
+3) Read the URL data https://randomuser.me/api/0.8/?results=1000
+4) Flatten the data completely
+5) Remove Numericals from the Username
+6) Broadcast Join 2nd step dataframe with 5th step url data using username column with left join
+
+		AVRO DATA  === LEFT BROADCAST JOIN  ==  NUMERICALS REMOVED URL DF
+		
+7) Filter Nationality column is null and is not NUll
+
+	7a ==== val unavailablecustomer = joindf.filter("nationalilty is null")
+	7b ==== val availablecustomer = joindf.filter("nationality is not null")
+
+8) For unavailable dataframe.... handle null values and replace it with "NotAvailable"
+
+	Find a way to replace string column with "Not available"
+	Find a way to replace non string column with 0
+
+9) 
+	availablecustomer     ------- I need one extracolumn as current_date -- currentdate
+	replacedNulldataframe ------- I need one extracolumn as current_date -- currentdate
